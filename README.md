@@ -3,14 +3,14 @@
 
 
 SOSWeb is provide web interface to SoS report.
-SoS support to collect linux based distributions tool data
+SoS support to collect linux based distributions tool data.
 
 
 This project is hosted at:
   * http://github.com/sosreport/sos
 
 
-And SOSWeb provide web interface
+And SOSWeb at:
 
   * https://github.com/Amitgb14/sosweb
 
@@ -22,8 +22,7 @@ And SOSWeb provide web interface
 with (root user)
 
 mkdir /etc/sosweb
-cp config/sosweb.conf
-
+cp config/sosweb.conf /etc/sosweb/
 
 with (normal user)
 
