@@ -1,0 +1,4 @@
+include config/sosweb.cfg
+include hosts.txt
+recursive-include sosweb/web/static *
+recursive-include sosweb/web/templates *

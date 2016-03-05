@@ -1,0 +1,109 @@
+
+        .chart {
+          position: relative;
+          display: inline-block;
+          width: 110px;
+          height: 110px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          margin-left: 40px;
+          text-align: center;
+        }
+        .chart canvas {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .percent {
+          display: inline-block;
+          line-height: 110px;
+          z-index: 2;
+        }
+        .percent:after {
+          content: '%';
+          margin-left: 0.1em;
+          font-size: .8em;
+        }
+
+        /* Custom Colored Panels */
+
+        .huge {
+            font-size: 40px;
+        }
+
+        .panel-primary a {
+            color: #ffffff;
+
+        }
+
+        .panel-primary  a:hover {
+            text-decoration: none;
+        }
+
+        .panel-green {
+            border-color: #5cb85c;
+
+        }
+
+        .panel-green .panel-heading {
+            border-color: #5cb85c;
+            color: #fff;
+            background-color: #5cb85c;
+        }
+
+        .panel-green a {
+            color: #ffffff;
+        }
+
+        .panel-green a:hover {
+            color: #3d8b3d;
+        }
+
+        .panel-red {
+            border-color: #d9534f;
+        }
+
+        .panel-red .panel-heading {
+            border-color: #d9534f;
+            color: #fff;
+            background-color: #d9534f;
+        }
+
+        .panel-red a {
+            color: #d9534f;
+        }
+
+        .panel-red a:hover {
+            color: #b52b27;
+        }
+
+        .panel-yellow {
+            border-color: #f0ad4e;
+        }
+
+        .panel-yellow .panel-heading {
+            border-color: #f0ad4e;
+            color: #fff;
+            background-color: #f0ad4e;
+        }
+
+        .panel-yellow a {
+            color: #f0ad4e;
+        }
+
+        .panel-yellow a:hover {
+            color: #df8a13;
+        }
+
+
+
+
+        .btn-green {
+            border-color: #5cb85c;
+            color: #fff;
+            background-color: #5cb85c;
+
+        }
+
+    </style>
+

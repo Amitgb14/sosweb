@@ -1,0 +1,98 @@
+{% extends "master.html" %}
+
+
+
+{% block body %}
+
+
+    <div id="wrapper">
+      <div id="page-wrapper">
+        <div class="container-fluid">
+
+           <div class="row">
+            <div class="col-lg-12">
+              <h1 class="page-header center">
+                SOS System Report
+              </h1>
+            </div>
+           </div>
+
+        <hr/><h3>Loaded Plugins:</h3>
+  
+<div class="row">
+ <div class="col-lg-10">
+
+<table class="table table-bordered table-hover table-striped">
+<tbody>
+
+<tr>
+
+{% for plugin in plugins %}
+
+  <td><a href="#{{ plugin }}">{{ plugin }}</a></td>
+  {% if loop.index%4==0 %}
+    </tr>
+  {% endif %}
+
+{% endfor %}
+</table>
+
+<div></div>
+<hr/>
+
+
+
+{% for plugin in plugins %}
+
+
+        <hr/><a name="{{ plugin }}"></a>
+
+        <h2> Plugin <em>{{ plugin }}</em></h2>
+
+        {% if plugins[plugin]['Files copied:']  %}
+
+            <p>Files copied:<br><ul>
+            {% for afile in plugins[plugin]['Files copied:'] %}
+                <li><a href="../../report/{{ report_name }}{{ afile['dstpath'] }}">{{ afile['srcpath'] }}</a>
+                {% if afile|length  == 3 %}
+                    (symlink to {{ afile['pointsto'] }})
+                {% endif %}
+                </li>
+            {% endfor %} 
+            </ul></p>
+        {% endif %} 
+
+
+        {% if plugins[plugin]['Commands Executed:']  %}
+
+            <p>Commands Executed:<br><ul>
+            {% for cmd in plugins[plugin]['Commands Executed:'] %}
+                {% if cmd['file'] %}
+                    <li><a href="../../report/{{ report_name }}/{{cmd['cmd_rel_path'][3:]}}">{{ cmd['exe'] }}</a></li>
+                {% else %}:
+                    <li>{{ cmd['exe'] }}</li>
+                {% endif %}
+            {% endfor %}
+            </ul></p>
+        {% endif %} 
+
+        
+        {% if plugins[plugin]['Alerts:'] %}
+            <p>Alerts:<br><ul>
+            {% for alert in plugins[plugin]['Alerts:'] %}
+                <li>{{ alert }}</li>
+            {% endfor %}
+            </ul></p>
+        {% endif %}
+
+        {% if 'Additional Information:' in plugins[plugin] %}
+            <p>Additional Information:<br>
+            plugins[plugin]['Additional Information:']</p>
+        {% endif %}
+
+
+{% endfor %}
+
+</div></div></div>
+
+{% endblock %}
