@@ -22,7 +22,7 @@ And SOSWeb at:
 with (root user)
 
 mkdir /etc/sosweb
-cp config/sosweb.conf /etc/sosweb/
+cp config/sosweb.cfg /etc/sosweb/
 
 with (normal user)
 
