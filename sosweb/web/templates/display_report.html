@@ -1,0 +1,7 @@
+
+{% block body %}
+    {% for line in fread %}
+        {{line.decode('utf8', 'ignore')}}
+        <br>
+    {% endfor %}
+{% endblock %}
