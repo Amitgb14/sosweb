@@ -12,10 +12,10 @@ if not os.path.exists(name):
 config = ConfigParser.RawConfigParser()
 config.read(name)
 
-HOST        =  config.get('sosweb', 'host') or '127.0.0.1'
-PORT        =  config.getint('sosweb', 'port') or 9770
-DEBUG       =  config.getboolean('sosweb', 'debug')
+HOST = config.get('sosweb', 'host') or '127.0.0.1'
+PORT = config.getint('sosweb', 'port') or 9770
+DEBUG = config.getboolean('sosweb', 'debug')
 
-REPORT_PATH =  config.get('sosweb', 'path')
+REPORT_PATH = config.get('sosweb', 'path')
 
-PAGESIZE    =  config.getint('sosweb', 'pagesize')
+PAGESIZE = config.getint('sosweb', 'pagesize')
